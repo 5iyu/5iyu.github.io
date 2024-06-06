@@ -19,19 +19,78 @@
 ]]></content>
   </entry>
   <entry>
-    <title>md.md</title>
-    <url>/2024/06/06/md-md/</url>
-    <content><![CDATA[<p>正文经典服饰发打发士大夫艰苦大家粉丝的疯狂发附件两份是分开发两份简历</p>
+    <title>快速部署hexo</title>
+    <url>/2024/06/06/%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2hexo/</url>
+    <content><![CDATA[<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <span id="more"></span>
-<p>1233231232312313</p>
+<h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><p><a href="https://nodejs.org/en/">官网下载</a></p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>安装好hexo后，在命令行中输入<code>hexo -v</code>查看版本号，若出现版本号则说明安装成功。<br>本地安装hexo完成。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>基本使用命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面</span></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，如已占用可修改_config.yml文件port配置）</span></span><br><span class="line">hexo deploy <span class="comment">#将.deploy文件夹部署到GitHub</span></span><br></pre></td></tr></table></figure>
+<h2 id="配置站点文件"><a href="#配置站点文件" class="headerlink" title="配置站点文件"></a>配置站点文件</h2><p>url 配置成自己的域名，否则会出现404错误。</p>
+<p>配置git同步信息</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: git@github.com:5iyu/5iyu.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<p>hexo同步需要安装hexo-deployer-git</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>站点修改中文</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">language 后面输入 zh-CN。</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置next主题"><a href="#配置next主题" class="headerlink" title="配置next主题"></a>配置next主题</h2><p>安装主题</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p>安装完成后，打开 Hexo 配置文件并将theme变量设置为next</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+<p>标签和分类在menu中，需要手动开启</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu</span><br><span class="line"></span><br><span class="line">切换主题</span><br><span class="line"># Schemes</span><br><span class="line">scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br><span class="line">选择你喜欢的一种样式，去掉前面的 #，其他主题前加上 # 即可</span><br></pre></td></tr></table></figure>
+<h2 id="开启分类标签功能"><a href="#开启分类标签功能" class="headerlink" title="开启分类标签功能"></a>开启分类标签功能</h2><p>在source目录中会生成相关的文件，在index.md中添加type: “categories”和type: “tags”，分别对应分类和标签。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>scaffolds文件夹中修改生成模板</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: md.md</span><br><span class="line">date: 2024-06-06 18:21:40</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="开启本地搜索"><a href="#开启本地搜索" class="headerlink" title="开启本地搜索"></a>开启本地搜索</h2><p>安装插件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<p>在主题文件_config.yml中启用插件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">    enable: true</span><br></pre></td></tr></table></figure>
+<p>本地不是基本完成</p>
+<h2 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h2><ol>
+<li>新建一个仓库，名字为：github用户名.github.io</li>
+<li>配置git公钥上传到github的setting -&gt; ssh中</li>
+<li>hexo g -d 编译静态网页并上传到github仓库</li>
+<li>设置github仓库的setting -&gt; github pages -&gt; source 选择 master branch</li>
+<li>访问github用户名.github.io</li>
+</ol>
+<p>首次使用git需要配置用户名和邮箱</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;&lt;EMAIL&gt;&quot;</span></span><br></pre></td></tr></table></figure>
+<p>生成ssh公钥，在命令行中输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;&lt;EMAIL&gt;&quot;</span></span><br></pre></td></tr></table></figure>
+<p>将生成的id_rsa.pub文件内容复制到github setting -&gt; ssh中</p>
+<h2 id="备份hexo源码"><a href="#备份hexo源码" class="headerlink" title="备份hexo源码"></a>备份hexo源码</h2><p>通过git分支的方式备份，使用那个备份插件上传的还是静态网页。</p>
+<ol>
+<li><p>首先把github仓库克隆到本地，复制.git文件夹到hexo根目录</p>
+</li>
+<li><p>创建.gitignore文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># .gitignore</span><br><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br><span class="line">.git*/</span><br><span class="line"># 这里只备份主题的配置文件</span><br><span class="line">.vscode/</span><br></pre></td></tr></table></figure></li>
+<li><p>创建分支</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch -a</span><br><span class="line"><span class="comment"># 查看所有分支</span></span><br><span class="line"></span><br><span class="line">git branch </span><br><span class="line"><span class="comment"># 查看当前使用分支</span></span><br><span class="line"></span><br><span class="line">git branch -b hexo-backup</span><br><span class="line"><span class="comment"># 切换到 hexo_backup 分支上，若不存在则创建该分支并切换到该分支</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># git branch -d hexo_backup</span></span><br><span class="line"><span class="comment"># 删除本地 hexo_backup 分支</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># git push origin --delete hexo_backup</span></span><br><span class="line"><span class="comment"># 删除远程 hexo_backup 分支</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="提交备份"><a href="#提交备份" class="headerlink" title="提交备份"></a>提交备份</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line"># 添加当前目录</span><br><span class="line"></span><br><span class="line">git commit -m &quot;backup&quot;</span><br><span class="line"># 添加commit，引号内的内容随意</span><br><span class="line"></span><br><span class="line"># 添加远程源</span><br><span class="line">git remote add origin &lt;EMAIL&gt;:5iyu/5iyu.github.io.git</span><br><span class="line"></span><br><span class="line"># 切换远程源</span><br><span class="line">git remote set-url origin &lt;EMAIL&gt;:5iyu/5iyu.github.io.git</span><br><span class="line"></span><br><span class="line">git push origin hexo_backup</span><br><span class="line"># 将本地数据推送到 hexo_backup 分支中</span><br></pre></td></tr></table></figure>
+<p>备份完成</p>
+<h2 id="恢复备份"><a href="#恢复备份" class="headerlink" title="恢复备份"></a>恢复备份</h2><p>新环境配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<p>克隆备份分支<br>将原来的source, package.json等文件克隆到hexo根目录下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone -b hexo_backup git@github.com:[username]/[username].github.io.git</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>渲染与推送</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<p>主分支利用hexo自身集成的git组件进行推送。</p>
+<p>网络教程很多，但是很多都是有问题的，这里记录一下正确的步骤。</p>
 ]]></content>
       <categories>
-        <category>web</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>1</tag>
-        <tag>2</tag>
-        <tag>3</tag>
+        <tag>主题</tag>
+        <tag>部署</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
