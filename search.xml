@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo加密1</title>
+    <url>/2024/06/06/password/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="Oh, these decrypted content cannot be verified, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="b9af5517e1cd742f8ee64b43dd62a81621045b3e86ad1ba7a45cf7a5bc76a429">165d50f05814027fb7fe5e4ae8a088d881c6d59fa64459ec347ca28d1deb818f9a4248eb62e85dc6f09c85c0b2cbadf883546160d00f555194059aa76905f573b52f229ba97b2cf2fcf9f5923c39aafe</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">嘿，这里需要密码。</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>主题</tag>
+        <tag>部署</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2024/06/06/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -46,6 +70,16 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br><span class="line">hexo new page tags</span><br></pre></td></tr></table></figure>
 <p>scaffolds文件夹中修改生成模板</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: md.md</span><br><span class="line">date: 2024-06-06 18:21:40</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="浏览页面显示当前浏览进度"><a href="#浏览页面显示当前浏览进度" class="headerlink" title="浏览页面显示当前浏览进度"></a>浏览页面显示当前浏览进度</h2><p>打开 themes&#x2F;next&#x2F;_config.yml，搜索关键字 scrollpercent，把 false 改为 true。<br><img src="https://img-blog.csdnimg.cn/20190829154043665.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FzNDgwMTMzOTM3,size_12,color_FFFFFF,t_70"></p>
+<h2 id="开启复制"><a href="#开启复制" class="headerlink" title="开启复制"></a>开启复制</h2><p>搜索 codeblock，找到如下配置</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">border_radius: 8   # 按钮圆滑度</span><br><span class="line">copy_button:  # 设置是否开启代码块复制按钮</span><br><span class="line">	enable: true</span><br><span class="line">	show_result: true  # 是否显示复制成功信息</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h2><p><a href="https://github.com/D0n9X1n/hexo-blog-encrypt">插件地址</a><br>安装插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-blog-encrypt</span><br></pre></td></tr></table></figure>
+<p>在主题文件_config.yml中启用插件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 文章加密 hexo-blog-encrypt</span><br><span class="line"># Security</span><br><span class="line">encrypt: # hexo-blog-encrypt</span><br><span class="line">  abstract: 这是加密的东西，继续阅读需要密码。</span><br><span class="line">  message: 嘿，这里需要密码。</span><br><span class="line">  tags:</span><br><span class="line">  - &#123;name: encryptAsDiary, password: passwordA&#125;</span><br><span class="line">  - &#123;name: encryptAsTips, password: passwordB&#125;</span><br><span class="line">  wrong_pass_message: Oh, this is an invalid password. Check and try again, please.</span><br><span class="line">  wrong_hash_message: Oh, these decrypted content cannot be verified, but you can still have a look.</span><br></pre></td></tr></table></figure>
+<p>文章添加加密标签，例如</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo加密1</span><br><span class="line">date: 2024-06-06 18:21:40</span><br><span class="line">categories: hexo</span><br><span class="line">tags:</span><br><span class="line">- 主题</span><br><span class="line">- 部署</span><br><span class="line">- hexo</span><br><span class="line">password: 123 </span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
 <h2 id="开启本地搜索"><a href="#开启本地搜索" class="headerlink" title="开启本地搜索"></a>开启本地搜索</h2><p>安装插件</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
 <p>在主题文件_config.yml中启用插件</p>
@@ -62,6 +96,8 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;username&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;&lt;EMAIL&gt;&quot;</span></span><br></pre></td></tr></table></figure>
 <p>生成ssh公钥，在命令行中输入</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;&lt;EMAIL&gt;&quot;</span></span><br></pre></td></tr></table></figure>
+<p>在.ssh文件夹中生成id_rsa和id_rsa.pub文件，将id_rsa.pub文件内容复制到github setting -&gt;<br>电脑路径</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Users\Administrator\.ssh</span><br></pre></td></tr></table></figure>
 <p>将生成的id_rsa.pub文件内容复制到github setting -&gt; ssh中</p>
 <h2 id="备份hexo源码"><a href="#备份hexo源码" class="headerlink" title="备份hexo源码"></a>备份hexo源码</h2><p>通过git分支的方式备份，使用那个备份插件上传的还是静态网页。</p>
 <ol>
