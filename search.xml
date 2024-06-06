@@ -83,7 +83,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
 <p>主分支利用hexo自身集成的git组件进行推送。</p>
 <p>网络教程很多，但是很多都是有问题的，这里记录一下正确的步骤。</p>
-<p>node同步到github总是有点问题，多同步几次就好了。</p>
+<p>使用·<code>hexo g -d</code>同步到github总是有点问题，多同步几次就好了。</p>
 ]]></content>
       <categories>
         <category>hexo</category>
