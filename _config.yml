@@ -110,9 +110,17 @@ deploy:
     repo: git@github.com:5iyu/5iyu.github.io.git
     branch: master
 
-backup:
-    theme: next
-    type: git
-    repository:
-    github: git@github.com:5iyu/5iyu.github.io.git.git,hexo
-    coding: git@e.coding.net:jeey/hexo/hexo.git,master
+# 文章加密 hexo-blog-encrypt
+# Security
+encrypt: # hexo-blog-encrypt
+  abstract: 这是加密的东西，继续阅读需要密码。
+  message: 嘿，这里需要密码。
+  tags:
+  - {name: encryptAsDiary, password: passwordA}
+  - {name: encryptAsTips, password: passwordB}
+  wrong_pass_message: Oh, this is an invalid password. Check and try again, please.
+  wrong_hash_message: Oh, these decrypted content cannot be verified, but you can still have a look.
+
+  
+
+  
