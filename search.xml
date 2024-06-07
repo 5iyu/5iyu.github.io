@@ -134,7 +134,8 @@
     <title>dockr封禁</title>
     <url>/2024/06/07/dock%E5%85%A8%E5%9F%9F%E5%B0%81%E9%94%81/</url>
     <content><![CDATA[<p>国内多个镜像源站下架docker镜像。<br><a href="https://imgse.com/i/pktnd5d"><img src="https://s21.ax1x.com/2024/06/07/pktnd5d.png" alt="pktnd5d.png"></a></p>
-<p>本来对docker操作还不是很熟悉，现在直接没得玩了，看了一些帖子使用代理也拉取不下来。</p>
+<p>本来对docker操作还不是很熟悉，现在直接没得玩了，看了一些帖子使用代理也拉取不下来。使用代理应该是没问题的。</p>
+<p>现在docker本来就对匿名用户有拉取次数限制，现在大家推荐的是自建仓库，搞得好麻烦。</p>
 ]]></content>
       <categories>
         <category>新闻</category>
