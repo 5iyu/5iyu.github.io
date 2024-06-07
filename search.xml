@@ -170,4 +170,56 @@
         <tag>vscode</tag>
       </tags>
   </entry>
+  <entry>
+    <title>npm下载源管理工具nrm</title>
+    <url>/2024/06/07/npm%E4%B8%8B%E8%BD%BD%E6%BA%90%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7nrm/</url>
+    <content><![CDATA[<p>nrm 是一个 npm 包，可以切换 npm 的源地址。</p>
+<span id="more"></span>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g nrm</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nrm <span class="built_in">ls</span> <span class="comment"># 查看所有源</span></span><br><span class="line">nrm use taobao <span class="comment"># 切换源</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>环境配置</category>
+      </categories>
+      <tags>
+        <tag>镜像源</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python版本管理工具pyenv</title>
+    <url>/2024/06/07/python%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7pyenv/</url>
+    <content><![CDATA[<p>pyenv是python版本管理工具，可以安装多个版本的python，并可以切换版本。</p>
+<span id="more"></span>
+<p><a href="https://blog.csdn.net/2301_82000445/article/details/135767677">csdn教程满详细的</a></p>
+]]></content>
+      <categories>
+        <category>环境配置</category>
+      </categories>
+      <tags>
+        <tag>版本管理</tag>
+        <tag>python</tag>
+        <tag>工具</tag>
+        <tag>pyenv</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>node版本管理工具nvm-windows</title>
+    <url>/2024/06/07/node%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<p>nvm版本管理工具是提供给Linux和Mac，windows下可以使用nvm-windows,nvm-windows是windows下的版本管理工具，nvm-windows安装后，在命令行中输入<code>nvm</code>，即可查看</p>
+<span id="more"></span>
+<h2 id="安装nvm-windows"><a href="#安装nvm-windows" class="headerlink" title="安装nvm-windows"></a>安装nvm-windows</h2><p><a href="https://github.com/coreybutler/nvm-windows">nvm-windows</a><br>使用命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nvm list available <span class="comment">#查看可用的版本</span></span><br><span class="line">nvm install 12.18.3 <span class="comment">#安装指定版本</span></span><br><span class="line">nvm use 12.18.3 <span class="comment">#使用指定版本</span></span><br><span class="line">nvm list <span class="comment">#查看版本列表</span></span><br><span class="line">nvm uninstall 12.18.3 <span class="comment">#卸载指定版本</span></span><br></pre></td></tr></table></figure>
+<p>ok，安装完成<br>还有很多版本管理工具，能用就行了。</p>
+]]></content>
+      <categories>
+        <category>环境配置</category>
+      </categories>
+      <tags>
+        <tag>版本管理</tag>
+        <tag>工具</tag>
+        <tag>node版本管理</tag>
+        <tag>win10</tag>
+      </tags>
+  </entry>
 </search>
