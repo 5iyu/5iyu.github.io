@@ -161,6 +161,7 @@
 <li>快捷键ctrl+alt+u上传图片<br>插件都是英文的说明，一点都看不懂。</li>
 </ol>
 <p><img src="https://s2.loli.net/2024/06/07/GZnhxutpEq16i4Y.png" alt="20240607184508"><br>ok，大功告成。</p>
+<p>没有代理是上传不了的，这个也不是很好的样子。<br>有点问题，用了代理还是上传不了，难以理解。</p>
 ]]></content>
       <categories>
         <category>图床</category>
@@ -255,6 +256,44 @@
         <tag>开发工具</tag>
         <tag>java</tag>
         <tag>idea</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>warp cloudflare连接不上了</title>
+    <url>/2024/06/07/cloudflare%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A%E4%BA%86/</url>
+    <content><![CDATA[<p>以前觉得蛮好用的，现在连不上了。</p>
+<p>到底是哪里出了问题？</p>
+<p>重新登录一下？</p>
+<p>安卓的也使用不了，电脑连不上，卸载了。<br><img src="https://s2.loli.net/2024/06/08/KBQWs1mTGhVrDvY.png" alt="20240608000507"></p>
+]]></content>
+      <categories>
+        <category>新闻</category>
+      </categories>
+      <tags>
+        <tag>cloudflare</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>go环境配置</title>
+    <url>/2024/06/07/go%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>现在全民转go语言的样子，不如我直接学习go语言。</p>
+<span id="more"></span>
+
+<h2 id="安装go语言"><a href="#安装go语言" class="headerlink" title="安装go语言"></a>安装go语言</h2><p><a href="https://golang.org/">go语言官网</a><br><a href="https://studygolang.com/dl">go语言中文网</a><br>一路next即可，安装完成后，在cmd中输入go version查看是否安装成功。</p>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p>新版本的go语言，已经不需要配置环境变量了。</p>
+<h2 id="vscode配置"><a href="#vscode配置" class="headerlink" title="vscode配置"></a>vscode配置</h2><h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><ol>
+<li>安装go语言插件</li>
+</ol>
+<p>暂时使用到这么多。</p>
+<p>熟悉完语法就可以进行开发了。只是这个go语法与以往的语法有大区别，需要时间熟悉熟悉。</p>
+]]></content>
+      <categories>
+        <category>环境配置</category>
+      </categories>
+      <tags>
+        <tag>go环境配置</tag>
+        <tag>go</tag>
+        <tag>vs code</tag>
       </tags>
   </entry>
 </search>
