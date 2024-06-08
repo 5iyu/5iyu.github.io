@@ -323,6 +323,10 @@
 <p>根据此教程选择即可，其实也没什么特别选项。网上的教程很多，但是试错比较麻烦。作者这样子配置，自己配置的时候不一定能行。</p>
 <h2 id="使用中文输入"><a href="#使用中文输入" class="headerlink" title="使用中文输入"></a>使用中文输入</h2><p><img src="https://s2.loli.net/2024/06/08/5CXabrDudRhIH8G.png" alt="20240608234545"></p>
 <h2 id="切换apt软件源"><a href="#切换apt软件源" class="headerlink" title="切换apt软件源"></a>切换apt软件源</h2><p>方法一：图形界面配置<br>start - 设置 - 软件和更新 - 下载自 - 其它 - 中国 - 选择镜像源 - 关闭 - 更新 - end<br>方法二：命令行配置<br>网上搜索即可<br>方法三：直接修改配置文件<br>同同上</p>
+<h2 id="查看ip和路由"><a href="#查看ip和路由" class="headerlink" title="查看ip和路由"></a>查看ip和路由</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ifconfig</span><br><span class="line">route -n</span><br></pre></td></tr></table></figure>
+<p>如果没有安装则：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt updata -y </span><br><span class="line">sudo apt install net-tools -y </span><br></pre></td></tr></table></figure>
+
 <h2 id="shell远程连接"><a href="#shell远程连接" class="headerlink" title="shell远程连接"></a>shell远程连接</h2><ol>
 <li>Ubuntu安装ssh服务<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install openssh-server</span><br></pre></td></tr></table></figure></li>
 <li>下载Nxshell客户端<ul>
