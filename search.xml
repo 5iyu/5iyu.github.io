@@ -296,4 +296,45 @@
         <tag>vs code</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Ubuntu快速配置</title>
+    <url>/2024/06/08/Ubuntu%E5%BF%AB%E9%80%9F%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<h2 id="windows关闭Hyper-V"><a href="#windows关闭Hyper-V" class="headerlink" title="windows关闭Hyper-V"></a>windows关闭Hyper-V</h2><p>win不关闭Hyper-V，会导致虚拟机运行卡机。<br>超详细讲解win10 Hyper-V 关闭(禁用)方法<br><a href="https://blog.csdn.net/weixin_46706771/article/details/107991229">https://blog.csdn.net/weixin_46706771&#x2F;article&#x2F;details&#x2F;107991229</a></p>
+<h2 id="安装ware"><a href="#安装ware" class="headerlink" title="安装ware"></a>安装ware</h2><p>很多资源站都有</p>
+<h2 id="下载Ubuntu镜像"><a href="#下载Ubuntu镜像" class="headerlink" title="下载Ubuntu镜像"></a>下载Ubuntu镜像</h2><p><a href="https://mirror.iscas.ac.cn/ubuntu-releases/23.10/">ISCAS镜像站</a></p>
+<h2 id="ware配置镜像启动"><a href="#ware配置镜像启动" class="headerlink" title="ware配置镜像启动"></a>ware配置镜像启动</h2><ol>
+<li>选择经典安装</li>
+<li>选择 稍后安装操作系统</li>
+<li>选择 Linux - ubuntu</li>
+<li>最大磁盘空间 100G - 将虚拟磁盘拆分为多个文件</li>
+<li>自定义硬件<ul>
+<li>内存 4g</li>
+<li>网络 桥接</li>
+<li>使用ISO镜像文件 - 启动完成切换为使用物理驱动器</li>
+<li>处理器默认</li>
+<li>取消显示器3D加速</li>
+</ul>
+</li>
+</ol>
+<h2 id="Ubuntu启动配置"><a href="#Ubuntu启动配置" class="headerlink" title="Ubuntu启动配置"></a>Ubuntu启动配置</h2><p>[【Linux】Ubuntu23.10+VMWare17虚拟机的安装教程 -  CSDN App]<a href="http://t.csdnimg.cn/thHDl">http://t.csdnimg.cn/thHDl</a></p>
+<p>根据此教程选择即可，其实也没什么特别选项。网上的教程很多，但是试错比较麻烦。作者这样子配置，自己配置的时候不一定能行。</p>
+<h2 id="使用中文输入"><a href="#使用中文输入" class="headerlink" title="使用中文输入"></a>使用中文输入</h2><p><img src="https://s2.loli.net/2024/06/08/5CXabrDudRhIH8G.png" alt="20240608234545"></p>
+<h2 id="切换apt软件源"><a href="#切换apt软件源" class="headerlink" title="切换apt软件源"></a>切换apt软件源</h2><p>方法一：图形界面配置<br>start - 设置 - 软件和更新 - 下载自 - 其它 - 中国 - 选择镜像源 - 关闭 - 更新 - end<br>方法二：命令行配置<br>网上搜索即可<br>方法三：直接修改配置文件<br>同同上</p>
+<h2 id="shell远程连接"><a href="#shell远程连接" class="headerlink" title="shell远程连接"></a>shell远程连接</h2><ol>
+<li>Ubuntu安装ssh服务<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install openssh-server</span><br></pre></td></tr></table></figure></li>
+<li>下载Nxshell客户端<ul>
+<li>切换中文语言<br><img src="https://s2.loli.net/2024/06/08/IOiBvy1nqXfKjAU.png" alt="20240608235433"></li>
+<li>配置连接信息，配置ip 和登录名密码即可</li>
+</ul>
+</li>
+</ol>
+<p>ok，基本配置完成，可以进行使用了。</p>
+]]></content>
+      <categories>
+        <category>环境配置</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
 </search>
