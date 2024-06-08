@@ -325,7 +325,7 @@
 <h2 id="切换apt软件源"><a href="#切换apt软件源" class="headerlink" title="切换apt软件源"></a>切换apt软件源</h2><p>方法一：图形界面配置<br>start - 设置 - 软件和更新 - 下载自 - 其它 - 中国 - 选择镜像源 - 关闭 - 更新 - end<br>方法二：命令行配置<br>网上搜索即可<br>方法三：直接修改配置文件<br>同同上</p>
 <h2 id="查看ip和路由"><a href="#查看ip和路由" class="headerlink" title="查看ip和路由"></a>查看ip和路由</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ifconfig</span><br><span class="line">route -n</span><br></pre></td></tr></table></figure>
 <p>如果没有安装则：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt updata -y </span><br><span class="line">sudo apt install net-tools -y </span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt update -y </span><br><span class="line">sudo apt install net-tools -y </span><br></pre></td></tr></table></figure>
 
 <h2 id="shell远程连接"><a href="#shell远程连接" class="headerlink" title="shell远程连接"></a>shell远程连接</h2><ol>
 <li>Ubuntu安装ssh服务<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt install openssh-server</span><br></pre></td></tr></table></figure></li>
@@ -342,6 +342,20 @@
       </categories>
       <tags>
         <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker不能快乐玩耍了</title>
+    <url>/2024/06/09/docker%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>docker镜像被撤后，Ubuntu起步安装docker都成问题。</p>
+<span id="more"></span>
+
+]]></content>
+      <categories>
+        <category>新闻</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
       </tags>
   </entry>
 </search>
