@@ -389,6 +389,10 @@
 <p>私有的也是要哆啦几次才行，后面还加上了版本号，这个版本号不知道重不重要。<br><img src="https://s2.loli.net/2024/06/09/kPdGErv1NBJQAYl.png" alt="20240609222254"></p>
 <p>拉跨，本来还以为能够使用了，要么是拉取不下，要么还是拉取不下来。</p>
 <p>收工。</p>
+<p>一个镜像要拉好久</p>
+<p><img src="https://s2.loli.net/2024/06/09/krVShJmYWn5qX6D.png" alt="20240609234628"></p>
+<p><a href="https://mirror.baidubce.com/">https://mirror.baidubce.com</a></p>
+<p>sudo mkdir -p &#x2F;etc&#x2F;docker<br>sudo tee &#x2F;etc&#x2F;docker&#x2F;daemon.json &lt;&lt;-‘EOF’<br>{<br>    “registry-mirrors”: [<br>        “<a href="https://docker.m.daocloud.io/">https://docker.m.daocloud.io</a>“<br>    ]<br>}<br>EOF<br>sudo systemctl daemon-reload<br>sudo systemctl restart docker</p>
 ]]></content>
       <categories>
         <category>环境配置</category>
