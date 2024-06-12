@@ -429,4 +429,55 @@
         <tag>分流</tag>
       </tags>
   </entry>
+  <entry>
+    <title>快速实例化服务器</title>
+    <url>/2024/06/13/%E5%BF%AB%E9%80%9F%E5%AE%9E%E4%BE%8B%E5%8C%96%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="解决新服务器无法使用root远程登录"><a href="#解决新服务器无法使用root远程登录" class="headerlink" title="解决新服务器无法使用root远程登录"></a>解决新服务器无法使用root远程登录</h2><p>1 使用内网进入服务器，切换到root用户</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo su - root</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p>修改SSH配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<p>将行末的PasswordAuthentication no修改为PasswordAuthentication yes。</p>
+<h2 id="root创建用户alex"><a href="#root创建用户alex" class="headerlink" title="root创建用户alex"></a>root创建用户alex</h2><p>adduser alex</p>
+<h2 id="授予sudo权限"><a href="#授予sudo权限" class="headerlink" title="授予sudo权限"></a>授予sudo权限</h2><p>分配到 <code>sudo</code>组 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo adduser image sudo</span><br></pre></td></tr></table></figure>
+<p>重启生效</p>
+<h2 id="安装dockre"><a href="#安装dockre" class="headerlink" title="安装dockre"></a>安装dockre</h2><p>切换apt源</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ca-certificates curl</span><br><span class="line"></span><br><span class="line">curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line"></span><br><span class="line">sudo add-apt-repository &quot;deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable&quot;</span><br><span class="line"></span><br><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+<h3 id="解决add-apt-repository-command-not-found"><a href="#解决add-apt-repository-command-not-found" class="headerlink" title="解决add-apt-repository: command not found"></a>解决add-apt-repository: command not found</h3><p>add-apt-repository 命令是software-properties-common包的一部分，因此安装这个包就OK了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install software-properties-common</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+
+<h2 id="修改用户密码，注意安全"><a href="#修改用户密码，注意安全" class="headerlink" title="修改用户密码，注意安全"></a>修改用户密码，注意安全</h2><p>root可以在网站修改</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo passwd username</span><br></pre></td></tr></table></figure>
+
+<h2 id="Ubuntu非root用户添加docker用户组"><a href="#Ubuntu非root用户添加docker用户组" class="headerlink" title="Ubuntu非root用户添加docker用户组"></a>Ubuntu非root用户添加docker用户组</h2><p>安装完docker以后，普通用户使用dockre指令需要sudo提权，这是用为docker需要使用到系统比较底层的资源。因此docker服务本身也是使用root用户运行的。<br>1 验证是否有docker用户组</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">gre docker /etc/group</span><br></pre></td></tr></table></figure>
+
+<p>如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alex@iZwz94u15dhankf4ub3nn4Z:~$ grep docker /etc/group</span><br><span class="line">docker:x:998:alex</span><br></pre></td></tr></table></figure>
+<p>1.1 如果没用dokcer用户组则创建</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo groupadd docker</span><br></pre></td></tr></table></figure>
+<p>2 添加非root用户到docker用户组</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo uaermod -aG docker alex</span><br></pre></td></tr></table></figure>
+<h2 id="安装小雅alist"><a href="#安装小雅alist" class="headerlink" title="安装小雅alist"></a>安装小雅alist</h2><p>1 镜像起别名</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker tag registry.cn-hangzhou.aliyuncs.com/jack-images/alist-aria2:latest aria2:latest</span><br></pre></td></tr></table></figure>
+
+<p>一键启动</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run -d --restart=unless-stopped -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name=&quot;alist&quot; xhofe/alist:latest</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>防火墙开放5244端口</p>
+<p><a href="http://47.xxx.xxx.10:5244/">http://47.xxx.xxx.10:5244/</a><br>生成admin随机密码<br>C4RSkVGi</p>
+<h2 id="挂载阿里云"><a href="#挂载阿里云" class="headerlink" title="挂载阿里云"></a>挂载阿里云</h2><p>1 生成刷新令牌<br>2 选择挂载目录ID</p>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><p>域名是国外的，服务器是国内的，好奇的是这个是服务器运营商搞的吗。<br><img src="https://s2.loli.net/2024/06/13/hjVloJ7e2cPNZvF.png" alt="20240613003519"><br>拦截原因<br>过第一遍http的时候  80port 通信内容Headers信息里的Host：域名 已被记录</p>
+<p>再次访问没有备案直接带这个host返回警告。</p>
+]]></content>
+      <categories>
+        <category>环境部署</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+        <tag>ubuntu</tag>
+        <tag>aliyun</tag>
+      </tags>
+  </entry>
 </search>
