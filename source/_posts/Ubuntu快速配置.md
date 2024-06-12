@@ -55,7 +55,7 @@ route -n
 ```
 如果没有安装则：
 ```bash
-sudo apt updata -y 
+sudo apt update -y 
 sudo apt install net-tools -y 
 ```
 
