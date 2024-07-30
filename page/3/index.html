@@ -23,41 +23,28 @@
 
 
 
-  <meta name="description" content="切换docker源就可以拉取了，国内好新人还是多的">
-<meta property="og:type" content="article">
-<meta property="og:title" content="docker换源使用">
-<meta property="og:url" content="http://5iyu.github.io/2024/06/09/docker%E6%8D%A2%E6%BA%90%E4%BD%BF%E7%94%A8/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="5iyu">
+<meta property="og:url" content="http://5iyu.github.io/page/3/index.html">
 <meta property="og:site_name" content="5iyu">
-<meta property="og:description" content="切换docker源就可以拉取了，国内好新人还是多的">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s2.loli.net/2024/06/09/i2x7vGRTLhVEUWO.png">
-<meta property="og:image" content="https://s2.loli.net/2024/06/09/NTv91KrCikJRLgB.png">
-<meta property="og:image" content="https://s2.loli.net/2024/06/09/sAYXjZItqJaiveU.png">
-<meta property="og:image" content="https://s2.loli.net/2024/06/09/5xEdVKlh29Hrnce.png">
-<meta property="og:image" content="https://s2.loli.net/2024/06/09/kPdGErv1NBJQAYl.png">
-<meta property="og:image" content="https://s2.loli.net/2024/06/09/krVShJmYWn5qX6D.png">
-<meta property="article:published_time" content="2024-06-09T11:58:27.000Z">
-<meta property="article:modified_time" content="2024-06-09T16:26:15.815Z">
 <meta property="article:author" content="5iyu">
-<meta property="article:tag" content="docker">
-<meta property="article:tag" content="换源">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2024/06/09/i2x7vGRTLhVEUWO.png">
 
-<link rel="canonical" href="http://5iyu.github.io/2024/06/09/docker%E6%8D%A2%E6%BA%90%E4%BD%BF%E7%94%A8/">
+<link rel="canonical" href="http://5iyu.github.io/page/3/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : false,
-    isPost : true,
+    isHome : true,
+    isPost : false,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>docker换源使用 | 5iyu</title>
+  <title>5iyu</title>
   
 
 
@@ -193,14 +180,13 @@
         <div class="content-wrap">
           
 
-          <div class="content post posts-expand">
+          <div class="content index posts-expand">
             
-
-    
+      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://5iyu.github.io/2024/06/09/docker%E6%8D%A2%E6%BA%90%E4%BD%BF%E7%94%A8/">
+    <link itemprop="mainEntityOfPage" href="http://5iyu.github.io/2024/06/06/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -212,9 +198,10 @@
       <meta itemprop="name" content="5iyu">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          docker换源使用
-        </h1>
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/06/06/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -222,24 +209,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2024-06-09 19:58:27" itemprop="dateCreated datePublished" datetime="2024-06-09T19:58:27+08:00">2024-06-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-06-10 00:26:15" itemprop="dateModified" datetime="2024-06-10T00:26:15+08:00">2024-06-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" itemprop="url" rel="index"><span itemprop="name">环境配置</span></a>
-                </span>
+              <time title="创建时间：2024-06-06 17:52:39 / 修改时间：17:52:03" itemprop="dateCreated datePublished" datetime="2024-06-06T17:52:39+08:00">2024-06-06</time>
             </span>
 
           
@@ -253,69 +225,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>切换docker源就可以拉取了，国内好新人还是多的</p>
-<span id="more"></span>
-<h2 id="切换docker源"><a href="#切换docker源" class="headerlink" title="切换docker源"></a>切换docker源</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
-<p>下面的步骤不执行也能使用<br>重新加载json配合配置文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br></pre></td></tr></table></figure>
-<p>重启docker</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
-<p>以上是网友自建分享的，使用不了多久</p>
-<h2 id="使用阿里云转存镜像"><a href="#使用阿里云转存镜像" class="headerlink" title="使用阿里云转存镜像"></a>使用阿里云转存镜像</h2><p>up 技术爬爬虾分享了阿里云转存镜像的教程视频，解决国内无法使用docker的问题</p>
-<p>现在全面封锁，阿里估计也上不了什么大分。</p>
-<p>暂时能用也是一种有效的解决方案</p>
-<h2 id="Ubuntu安装docker"><a href="#Ubuntu安装docker" class="headerlink" title="Ubuntu安装docker"></a>Ubuntu安装docker</h2><p>切换apt源</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ca-certificates curl</span><br><span class="line">curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line">sudo add-apt-repository &quot;deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable&quot;</span><br><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
-<p>测试成功<br><img src="https://s2.loli.net/2024/06/09/i2x7vGRTLhVEUWO.png" alt="20240609204506"></p>
-<p>安装如此简单？离线的方式有空再研究一下，现在先这样用着<br><img src="https://s2.loli.net/2024/06/09/NTv91KrCikJRLgB.png" alt="20240609204739"></p>
-<h2 id="docker镜像源"><a href="#docker镜像源" class="headerlink" title="docker镜像源"></a>docker镜像源</h2><p>20240609 拉取失败<br>Daocloud</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://registry.daocloud.io/</span><br></pre></td></tr></table></figure>
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>网友自建</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://registry.moslb.com</span><br></pre></td></tr></table></figure>
-<p>拉取超时，没什么用。</p>
-<h2 id="试一下转存"><a href="#试一下转存" class="headerlink" title="试一下转存"></a>试一下转存</h2><p>跟着配置没什么问题，可是拉取到我就不行了，每一件事是顺利的。<br><img src="https://s2.loli.net/2024/06/09/sAYXjZItqJaiveU.png" alt="20240609213152"></p>
-<p>吓我一跳，多拉几次就成功了。<br>这个镜像是设置公开的。下面实现私有的这么设置。<br><img src="https://s2.loli.net/2024/06/09/5xEdVKlh29Hrnce.png" alt="20240609221500"></p>
-<p>私有的也是要哆啦几次才行，后面还加上了版本号，这个版本号不知道重不重要。<br><img src="https://s2.loli.net/2024/06/09/kPdGErv1NBJQAYl.png" alt="20240609222254"></p>
-<p>拉跨，本来还以为能够使用了，要么是拉取不下，要么还是拉取不下来。</p>
-<p>收工。</p>
-<p>一个镜像要拉好久</p>
-<p><img src="https://s2.loli.net/2024/06/09/krVShJmYWn5qX6D.png" alt="20240609234628"></p>
-<p><a target="_blank" rel="noopener" href="https://mirror.baidubce.com/">https://mirror.baidubce.com</a></p>
-<p>sudo mkdir -p &#x2F;etc&#x2F;docker<br>sudo tee &#x2F;etc&#x2F;docker&#x2F;daemon.json &lt;&lt;-‘EOF’<br>{<br>    “registry-mirrors”: [<br>        “<a target="_blank" rel="noopener" href="https://docker.m.daocloud.io/">https://docker.m.daocloud.io</a>“<br>    ]<br>}<br>EOF<br>sudo systemctl daemon-reload<br>sudo systemctl restart docker</p>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
     </div>
 
     
     
     
-
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/docker/" rel="tag"># docker</a>
-              <a href="/tags/%E6%8D%A2%E6%BA%90/" rel="tag"># 换源</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2024/06/09/v2ary%E5%88%86%E6%B5%81/" rel="prev" title="v2ary分流">
-      <i class="fa fa-chevron-left"></i> v2ary分流
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2024/06/13/%E5%BF%AB%E9%80%9F%E5%AE%9E%E4%BE%8B%E5%8C%96%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="next" title="快速实例化服务器">
-      快速实例化服务器 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
+        <div class="post-eof"></div>
       </footer>
-    
   </article>
   
   
   
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
 
 
 
@@ -367,7 +309,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%87%E6%8D%A2docker%E6%BA%90"><span class="nav-number">1.</span> <span class="nav-text">切换docker源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E8%BD%AC%E5%AD%98%E9%95%9C%E5%83%8F"><span class="nav-number">2.</span> <span class="nav-text">使用阿里云转存镜像</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu%E5%AE%89%E8%A3%85docker"><span class="nav-number">3.</span> <span class="nav-text">Ubuntu安装docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#docker%E9%95%9C%E5%83%8F%E6%BA%90"><span class="nav-number">4.</span> <span class="nav-text">docker镜像源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%95%E4%B8%80%E4%B8%8B%E8%BD%AC%E5%AD%98"><span class="nav-number">5.</span> <span class="nav-text">试一下转存</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

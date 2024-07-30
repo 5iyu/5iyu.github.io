@@ -517,4 +517,15 @@
         <tag>测速</tag>
       </tags>
   </entry>
+  <entry>
+    <title>eNSP安装</title>
+    <url>/2024/07/30/eNSP%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p>eNSP是华为公司推出的网络仿真平台，可以模拟多种协议栈和协议的交互，并且可以模拟多种网络设备。</p>
+<span id="more"></span>
+<p>按顺序安装即可，安装过程比较简单。各个系统版本兼容性存在问题，一般解决办法就是改兼容性和勾选管理员权限打开。<br><img src="https://s2.loli.net/2024/07/30/k8aEdgLRtnu4Vlq.png" alt="20240730190556"></p>
+]]></content>
+      <categories>
+        <category>环境配置</category>
+      </categories>
+  </entry>
 </search>
