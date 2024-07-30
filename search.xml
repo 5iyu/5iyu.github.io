@@ -528,4 +528,17 @@
         <category>环境配置</category>
       </categories>
   </entry>
+  <entry>
+    <title>alist+koid搭建影音播放</title>
+    <url>/2024/07/30/alist-koid%E6%90%AD%E5%BB%BA%E5%BD%B1%E9%9F%B3%E6%92%AD%E6%94%BE/</url>
+    <content><![CDATA[<p>主要需要合适的固件刷移动盒子系统，通过第三方系统可以安装第三方应用，实现网络影音播放。</p>
+<span id="more"></span>
+<p>koid是一款非常优秀的影音播放器，支持多种协议，支持自动识别视频格式，支持在线播放。</p>
+<p>电视盒子系统是32位，所以需要下载32位的软件.64位的软件无法安装。</p>
+<p>天翼云盘免费会员目前没用限速，阿里云盘已经倒下，pikpak封闭第三方播放，115需要付费。且用且珍惜，免费的云盘不多了。</p>
+]]></content>
+      <categories>
+        <category>环境配置</category>
+      </categories>
+  </entry>
 </search>
